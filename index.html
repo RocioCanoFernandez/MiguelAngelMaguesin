@@ -8,21 +8,25 @@
 </head>
 <body>
   <div class="hub-container">
-    <!-- VCard Download Bubble -->
-    <button class="floating-vcard" onclick="generateVCard()" aria-label="Guardar contacto">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-    </button>
-
-    <!-- Header -->
-    <header class="header">
+    <!-- Dark Brand Header: Seamless Black Logo integration + Glass Save Button -->
+    <header class="brand-header">
+      <button class="floating-vcard" onclick="generateVCard()" aria-label="Guardar contacto">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      </button>
       <div class="logo-container">
         <img src="public/logo_labcheap.jpg" alt="LabCheap" onerror="this.src='https://placehold.co/200x50?text=LabCheap'">
       </div>
-      
+    </header>
+
+    <!-- Centered Profile Section -->
+    <div class="profile-section">
       <div class="profile-img-container">
         <img src="public/miguel_angel_foto.jpeg" alt="Miguel Ángel Maguesin" class="profile-img" onerror="this.src='https://placehold.co/120x120?text=Foto'">
       </div>
-      
+    </div>
+
+    <!-- Centered Profile Info -->
+    <div class="profile-container">
       <div class="profile-info">
         <h1>Miguel Ángel Maguesin</h1>
         <h2>Dirección</h2>
@@ -39,8 +43,8 @@
         </a>
       </div>
 
-      <p class="slogan">"Donde tus dispositivos cobran vida."</p>
-    </header>
+      <p class="slogan">Donde tus dispositivos cobran vida.</p>
+    </div>
 
     <!-- Main Actions -->
     <main class="section">
@@ -79,7 +83,7 @@
           Facebook
         </a>
         <a href="https://www.tiktok.com/@grupo_labcheap" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
           TikTok
         </a>
       </div>
@@ -106,7 +110,15 @@
 
     <!-- Footer -->
     <footer class="footer">
-      <p>© 2026 LabCheap · SeviAI Ecosystem</p>
+      <div style="margin-top: 0.5rem; display: flex; flex-direction: column; align-items: center; opacity: 0.8; transition: opacity 0.3s ease;" onmouseenter="this.style.opacity='1'" onmouseleave="this.style.opacity='0.8'">
+        <p style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 500; color: rgba(0,0,0,0.8); text-align: center; margin: 0; padding-bottom: 16px;">
+          © 2026 LabCheap
+        </p>
+        <a href="https://www.seviai.es/" target="_blank" rel="noopener noreferrer" style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.2em; font-weight: bold; color: rgba(0,0,0,0.7); display: flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; transition: color 0.3s ease;" onmouseenter="this.style.color='#DCAE56'; if(this.querySelector('img')) this.querySelector('img').style.opacity='1'" onmouseleave="this.style.color='rgba(0,0,0,0.7)'; if(this.querySelector('img')) this.querySelector('img').style.opacity='0.7'">
+          SeviAI Ecosystem
+          <img src="public/logo_sin_fondo.png" alt="SeviAI" onerror="this.src='https://seviai.es/wp-content/uploads/2023/10/logo-seviai-sin-fondo.png'" style="height: 16px; width: auto; opacity: 0.7; filter: grayscale(100%); transition: opacity 0.3s ease;" />
+        </a>
+      </div>
     </footer>
   </div>
   

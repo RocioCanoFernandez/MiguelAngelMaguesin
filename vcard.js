@@ -1,6 +1,6 @@
 
 function generateVCard() {
-  const hubUrl = window.location.href;
+  const hubUrl = "https://hub-hub-miguel-labcheap.npfusf.easypanel.host/";
   const vcard = `BEGIN:VCARD
 VERSION:3.0
 N:${'Miguel Ángel Maguesin'};;;;
